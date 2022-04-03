@@ -1,0 +1,102 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> listaNumeros = new ArrayList<>();
+        Stack<Integer> pilhaNumeros = new Stack<>();
+        Queue<Integer> filaNumeros = new LinkedList<>();
+        int i;
+
+       
+        for (i = 1; i <= 5; i++) {
+            listaNumeros.add(i);
+
+        }
+        System.out.println("Número de elementos da lista: " + listaNumeros.size());
+        System.out.println("Seguem os números na lista: ");
+        while(!listaNumeros.isEmpty()){
+           
+            int elementoLista = listaNumeros.remove(0);
+         
+            System.out.printf("%d ", elementoLista);
+           
+            pilhaNumeros.push(elementoLista);
+        }
+
+        if (listaNumeros.isEmpty()) {
+            System.out.println("\nminha lista está vazia!");
+        } else {
+            System.out.println("\ndeu algo errado, minha lista tinha que estar vazia.");
+        }
+
+        System.out.println("Número de elementos da pilha: " + pilhaNumeros.size());
+
+        System.out.println("Seguem os números na pilha: ");
+        while(!pilhaNumeros.isEmpty()) {
+           
+            int elementoPilha = pilhaNumeros.pop();
+      
+            System.out.printf("%d ", elementoPilha);
+          
+            filaNumeros.add(elementoPilha);
+        }
+
+        if (pilhaNumeros.isEmpty()) {
+            System.out.println("\nminha pilha está vazia!");
+        } else {
+            System.out.println("\ndeu algo errado, minha pilha tinha que estar vazia.");
+        }
+        
+        System.out.println("No momento tenho o seguinte número de elementos na minha fila: " + filaNumeros.size());
+        System.out.println("Vamos ver quais são os elementos da minha fila e em que ordem estão?");
+
+        for(Integer numeroFila: filaNumeros){
+            System.out.printf("%d ", numeroFila);
+        }
+
+     
+        for (i = 6; i <= 10; i++) {
+            listaNumeros.add(i);
+
+        }
+        System.out.println("\nNúmero de elementos da lista na segunda rodada de inserção: " + listaNumeros.size());
+        System.out.println("Seguem os números na lista na segunda rodada: ");
+        while(!listaNumeros.isEmpty()){
+            
+            int elementoLista = listaNumeros.remove(0);
+           
+            System.out.printf("%d ", elementoLista);
+            
+            pilhaNumeros.push(elementoLista);
+        }
+
+        if (listaNumeros.isEmpty()) {
+            System.out.println("\nminha lista está vazia!");
+        } else {
+            System.out.println("\ndeu algo errado, minha lista tinha que estar vazia.");
+        }
+
+        System.out.println("Número de elementos da pilha: " + pilhaNumeros.size());
+        System.out.println("Seguem os números na pilha na segunda rodada: ");
+        while(!pilhaNumeros.isEmpty()) {
+            
+            int elementoPilha = pilhaNumeros.pop();
+            
+            System.out.printf("%d ", elementoPilha);
+                        filaNumeros.add(elementoPilha);
+        }
+
+        if (pilhaNumeros.isEmpty()) {
+            System.out.println("\nminha pilha está vazia!");
+        } else {
+            System.out.println("\ndeu algo errado, minha pilha tinha que estar vazia.");
+        }
+
+        System.out.println("O tamanho final da minha fila será de: " + filaNumeros.size());
+        System.out.println("Seguem os números na fila em ordem depois de todas as inserões: ");
+        for(Integer numeroFila : filaNumeros){
+            System.out.printf("%d ", numeroFila);
+        }
+
+    }
+}
